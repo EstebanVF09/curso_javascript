@@ -1,10 +1,15 @@
-var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+var alertPlaceholder = document.getElementById('liveAlertPlaceholder');
 
 function ShowAlert(message, type) {
-  var wrapper = document.createElement('div')
-  wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+//   var wrapper = document.createElement('div')
+//   wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+ 
+  //var wrapper = document.createElement('ResultadoCalculo')
+  var alertPlaceholder = document.getElementById('ResultadoCalculo');
+  alertPlaceholder.innerHTML = `<p>${message}</p>`;
 
-  alertPlaceholder.append(wrapper)
+  var Modal = new bootstrap.Modal(document.getElementById('ResultadoModal'));
+  Modal.show();
 }
 
 console.group("Cuadrados");
